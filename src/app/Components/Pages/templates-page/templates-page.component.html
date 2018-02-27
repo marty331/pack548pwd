@@ -1,0 +1,23 @@
+<div class="row contain">
+  <div class="col s12 ">
+    <!-- <mz-collection>
+    <mz-collection-header><h4>Pine Wood Derby Templates</h4></mz-collection-header>
+    <mz-collection-header><h5>Click a template link to view.</h5></mz-collection-header>
+    <mz-collection-item *ngFor="let template of templates;let i = index" (click)="photoURL(template)">Template {{template}}</mz-collection-item>
+  </mz-collection> -->
+  <form class="form-inline" (ngSubmit)="photoURL(selectedTemplate)">
+    <mz-select-container>
+      <select mz-select
+        id="options-select"
+        [label]="'Select Template'"
+        [placeholder]="selectedTemplate"
+        name="text"
+        [(ngModel)]="selectedTemplate"> <!--Supplement an id here instead of using 'text'-->
+          <option *ngFor="let template of templates"  value="{{template}}">{{template}}</option>
+      </select>
+    </mz-select-container>
+    <button type="submit" class="btn btn-large blue">Search Templates</button>
+  </form>
+    <pdf-viewer [autoresize]="true" [fit-to-page]="true" src="{{selectedTemplate}}" [render-text]="true" style="display: block;"></pdf-viewer>
+  </div>
+</div>

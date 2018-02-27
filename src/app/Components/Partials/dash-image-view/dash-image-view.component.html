@@ -1,0 +1,5 @@
+<div class="image-views" >
+  <div *ngFor="let image of images; let i = index">
+    <img src="{{image.url}}" alt="" (click)="getSrc(image)">
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <div *ngIf="afAuth.authState | async as user; else showLogin" class="logout">
+    <h2>Hello {{ user.displayName }}! <img src="{{user.photoURL}}" class="user-pic"></h2>
+    <button class="btn btn-large" (click)="logout()">Logout</button>
+    <div class="dash-buttons">
+      <button class="btn" (click)="setDash('cars')">Cars</button>
+      <button class="btn" (click)="setDash('images')">Images</button>
+      <button class="btn" (click)="setDash('results')">Results</button>
+    </div>
+    <div *ngIf="authenticated">
+      <div *ngIf="cars">
+        <div class="left">
+          <app-dash-cars></app-dash-cars>
+        </div>
+        <div class="right">
+          <app-dash-image-view></app-dash-image-view>
+        </div>
+      </div>
+      <div class="blog-container" *ngIf="images">
+
+          <app-dash-images></app-dash-images>
+
+      </div>
+      <div *ngIf="results">
+        <app-dash-results></app-dash-results>
+      </div>
+    </div>
+
+
+  </div>
+  <ng-template #showLogin>
+    <div class="login">
+      <p>Please login.</p>
+      <button class="btn btn-large" (click)="login()">Login with Google</button>
+    </div>
+
+  </ng-template>
+</div>

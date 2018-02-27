@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">Add Item</span>
+    <form (ngSubmit)="onSubmit()" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <input type="text"  [(ngModel)]="carEntry.name" name="name">
+          <label >Car Name</label>
+        </div>
+        <div class="input-field col s4">
+          <input type="text"  [(ngModel)]="carEntry.scout" name="scout">
+          <label >Scout</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <input type="text"  [(ngModel)]="carEntry.carNumber" name="carNumber">
+          <label >Car Number</label>
+        </div>
+        <div class="input-field col s4">
+          <input type="text"  [(ngModel)]="carEntry.den" name="den">
+          <label >Den</label>
+        </div>
+        <div class="input-field col s4">
+          <input type="number"  [(ngModel)]="carEntry.year" name="year">
+          <label >Year</label>
+        </div>
+      </div>
+      <div class="row">
+        <input type="text" [(ngModel)]="carEntry.pic" name="pic">
+        <label >Pic</label>
+      </div>
+
+      <div class="row">
+        <div class="col s6">
+          <input type="submit" value="submit" class="btn">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

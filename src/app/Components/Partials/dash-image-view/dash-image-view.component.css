@@ -1,0 +1,11 @@
+.image-views {
+  background: #f9f9f9;
+  color: #333333;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}

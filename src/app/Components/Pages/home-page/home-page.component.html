@@ -1,0 +1,50 @@
+<div class="container col s12">
+<div class="uptop">
+  <form class="form-inline" (ngSubmit)="selectYear(yearSelected)">
+    <mz-select-container>
+      <select mz-select
+        id="options-select"
+        [label]="'Select Year'"
+        [placeholder]="yearSelected"
+        name="text"
+        [(ngModel)]="yearSelected"> <!--Supplement an id here instead of using 'text'-->
+          <option *ngFor="let year of years"  value="{{year}}">{{year}}</option>
+      </select>
+    </mz-select-container>
+    <button type="submit" class="btn btn-large blue">Search Cars</button>
+  </form>
+  <form class="form-inline denSelect" (ngSubmit)="selectDen(denSelected)">
+    <mz-select-container>
+      <select mz-select
+        id="options-select"
+        [label]="'Select Den'"
+        [placeholder]="denSelected"
+        name="text"
+        [(ngModel)]="denSelected"> <!--Supplement an id here instead of using 'text'-->
+          <option *ngFor="let den of dens"  value="{{den}}">{{den}}</option>
+      </select>
+    </mz-select-container>
+    <button type="submit" class="btn btn-large blue">Search Den</button>
+  </form>
+
+    <div>
+
+      <div class="selectedCars" *ngFor="let car of selectedCars" >
+        <mz-card
+        class="blue white-text"
+        [hoverable]="false">
+        <mz-card-title>
+          {{car.name}}
+        </mz-card-title>
+        <mz-card-content>
+          Scout: {{car.scout}}
+          Den: {{car.den}}
+          Car Number: {{car.carNumber}}
+          <img class="materialboxed" width="100%" src="{{car.pic}}">
+        </mz-card-content>
+      </mz-card>
+      </div>
+
+    </div>
+  </div>
+</div>

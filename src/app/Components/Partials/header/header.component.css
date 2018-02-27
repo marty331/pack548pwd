@@ -1,0 +1,51 @@
+nav {
+  /* color: #0B0C10 !important; */
+  background-color: #1976D2;
+}
+
+.navbar-fixed {
+  /* color: #0B0C10 !important; */
+  max-width: 100vw;
+}
+
+.brand-logo {
+  /* color: #0B0C10; */
+}
+
+#mobile-demo li a {
+  color: #f9f9f9 !important;
+}
+#mobile-demo {
+  background-color: #1976D2 !important;
+}
+
+
+nav ul a {
+  /* color: #0B0C10; */
+}
+
+.page-scroll-header {
+   /* background-color: #0B0C10 !important; */
+   /*color: #000000!important;*/
+   /*opacity: 0.9;*/
+
+ }
+nav .page-scroll-header div .nav-wrapper{
+  height: 75px !important;
+}
+
+a.page-scroll-header {
+  color: #f9f9f9 !important;
+}
+
+@media(max-width: 700px) {
+  .name {
+    display: none;
+  }
+  nav .page-scroll-header {
+    color: #f9f9f9;
+  }
+  nav .button-collapse i {
+    /* color: #0B0C10; */
+  }
+}
